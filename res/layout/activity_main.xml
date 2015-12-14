@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>    
+<RelativeLayout 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <LinearLayout
+        android:id="@+id/llayout" 
+        android:orientation="vertical"
+        android:layout_width="match_parent" 
+    	android:layout_height="wrap_content" 
+    	android:layout_alignParentTop="true" 
+        >
+        <include layout="@layout/top1"/>
+        <include layout="@layout/top2"/>
+    </LinearLayout>
+    <com.example.isweixin.MyScrollLayout    
+	  xmlns:android="http://schemas.android.com/apk/res/android"    
+	  android:id="@+id/ScrollLayout"    
+	  android:layout_width="fill_parent"    
+	  android:layout_below="@id/llayout"
+	  android:layout_alignParentBottom="true" 
+	  android:layout_height="fill_parent">    
+  
+ 	  <com.example.isweixin.MyFrame
+ 	    android:background="@color/white"
+	  	android:layout_width="fill_parent"    
+	  	android:layout_height="wrap_content">
+	  	 <!-- 
+ 	      <com.example.isweixin.SetScroll 
+ 	          android:layout_width="fill_parent"    
+	  			android:layout_height="wrap_content"
+	  			android:scrollbars="vertical"
+	  			android:scrollbarStyle="insideInset"
+ 	          >
+        	<include layout="@layout/liaotian"/>
+        	</com.example.isweixin.SetScroll>
+        	-->
+ 	     		 <ListView
+                    android:id="@+id/listView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@drawable/reader_item_divider"
+                    android:listSelector="@android:color/transparent"
+                     >
+                </ListView>
+	  </com.example.isweixin.MyFrame>   
+      
+	  <FrameLayout    
+	    android:background="@color/white"
+	  	android:layout_width="fill_parent"    
+	  	android:layout_height="wrap_content">
+ 	     		 <include layout="@layout/faxian"/>
+	  </FrameLayout>    
+	      
+	  <FrameLayout
+	    android:background="@color/white"
+	  	android:layout_width="fill_parent"    
+	  	android:layout_height="wrap_content">     
+	  	<!--  
+	        <com.example.isweixin.SetScroll
+ 	          android:layout_width="fill_parent"    
+	  			android:layout_height="wrap_content"
+	  			android:scrollbarStyle="insideInset"
+	  			android:scrollbars="vertical"
+ 	          >
+	   			 <include layout="@layout/tongxunlu"/>
+	   	    </com.example.isweixin.SetScroll>
+	   	    -->
+	   	    <ListView
+                    android:id="@+id/listView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@drawable/reader_item_divider"
+                    android:listSelector="@android:color/transparent" >
+                </ListView>
+	   	    
+	  </FrameLayout>    
+	</com.example.isweixin.MyScrollLayout> 
+</RelativeLayout>
+
